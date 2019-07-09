@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище ITestModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Access_Rights">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_access_right" Type="int" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id_ava" Type="int" Nullable="false" />
+          <Property Name="Score" Type="int" />
+          <Property Name="Level" Type="int" />
+        </EntityType>
+        <EntityType Name="Ava">
+          <Key>
+            <PropertyRef Name="NotId" />
+          </Key>
+          <Property Name="NotId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FAQ">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Text" Type="ntext" Nullable="false" />
+        </EntityType>
+        <EntityType Name="My_Dictionary">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_word" Type="int" Nullable="false" />
+          <Property Name="Id_account" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Section">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Themes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id_section" Type="int" Nullable="false" />
+          <Property Name="Id_user" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Words">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_themes" Type="int" Nullable="false" />
+          <Property Name="Word" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Question" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Answer" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Variation_2" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Variation_3" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Variation_4" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Determination" Type="ntext" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище ITestModelContainer">
+          <EntitySet Name="Access_Rights" EntityType="Self.Access_Rights" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ava" EntityType="Self.Ava" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAQ" EntityType="Self.FAQ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="My_Dictionary" EntityType="Self.My_Dictionary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Section" EntityType="Self.Section" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Themes" EntityType="Self.Themes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Words" EntityType="Self.Words" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ITestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Access_Rights">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_access_right" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id_ava" Type="Int32" Nullable="false" />
+          <Property Name="Score" Type="Int32" />
+          <Property Name="Level" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Ava">
+          <Key>
+            <PropertyRef Name="NotId" />
+          </Key>
+          <Property Name="NotId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FAQ">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="My_Dictionary">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_word" Type="Int32" Nullable="false" />
+          <Property Name="Id_account" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Section">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Themes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Id_section" Type="Int32" Nullable="false" />
+          <Property Name="Id_user" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Words">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_themes" Type="Int32" Nullable="false" />
+          <Property Name="Word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Variation_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Variation_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Variation_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Determination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ITestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Access_Rights" EntityType="Self.Access_Rights" />
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" />
+          <EntitySet Name="Ava" EntityType="Self.Ava" />
+          <EntitySet Name="FAQ" EntityType="Self.FAQ" />
+          <EntitySet Name="My_Dictionary" EntityType="Self.My_Dictionary" />
+          <EntitySet Name="Section" EntityType="Self.Section" />
+          <EntitySet Name="Themes" EntityType="Self.Themes" />
+          <EntitySet Name="Words" EntityType="Self.Words" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ITestModelContainer" CdmEntityContainer="ITestEntities">
+          <EntitySetMapping Name="Access_Rights">
+            <EntityTypeMapping TypeName="ITestModel.Access_Rights">
+              <MappingFragment StoreEntitySet="Access_Rights">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="ITestModel.Accounts">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_access_right" ColumnName="Id_access_right" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Id_ava" ColumnName="Id_ava" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ava">
+            <EntityTypeMapping TypeName="ITestModel.Ava">
+              <MappingFragment StoreEntitySet="Ava">
+                <ScalarProperty Name="NotId" ColumnName="NotId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAQ">
+            <EntityTypeMapping TypeName="ITestModel.FAQ">
+              <MappingFragment StoreEntitySet="FAQ">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="My_Dictionary">
+            <EntityTypeMapping TypeName="ITestModel.My_Dictionary">
+              <MappingFragment StoreEntitySet="My_Dictionary">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_word" ColumnName="Id_word" />
+                <ScalarProperty Name="Id_account" ColumnName="Id_account" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Section">
+            <EntityTypeMapping TypeName="ITestModel.Section">
+              <MappingFragment StoreEntitySet="Section">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Themes">
+            <EntityTypeMapping TypeName="ITestModel.Themes">
+              <MappingFragment StoreEntitySet="Themes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id_section" ColumnName="Id_section" />
+                <ScalarProperty Name="Id_user" ColumnName="Id_user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Words">
+            <EntityTypeMapping TypeName="ITestModel.Words">
+              <MappingFragment StoreEntitySet="Words">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_themes" ColumnName="Id_themes" />
+                <ScalarProperty Name="Word" ColumnName="Word" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="Variation_2" ColumnName="Variation_2" />
+                <ScalarProperty Name="Variation_3" ColumnName="Variation_3" />
+                <ScalarProperty Name="Variation_4" ColumnName="Variation_4" />
+                <ScalarProperty Name="Determination" ColumnName="Determination" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

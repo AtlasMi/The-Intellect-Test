@@ -1,0 +1,22 @@
+﻿<Window x:Class="The_Intellect_Test.StudyWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="ITest.ico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_Intellect_Test"
+        mc:Ignorable="d"
+        Title="The Intellect Test | Изучение" Height="475.08" Width="835.619">
+    <Grid>
+        <Border BorderBrush="DarkGray" BorderThickness="1" Height="348" Margin="269,48,24,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox_words" HorizontalAlignment="Left" Height="348" Margin="10,48,0,0" VerticalAlignment="Top" Width="246" SelectionChanged="listBox_words_SelectionChanged"/>
+        <Button x:Name="button_back" Content="Назад" HorizontalAlignment="Left" Margin="10,410,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Cursor="Hand"/>
+        <Label x:Name="label_themes" Content="Тематика:" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_themes" HorizontalAlignment="Left" Margin="73,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="348" Margin="271,48,0,0" VerticalAlignment="Top" Width="533" VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
+            <TextBlock x:Name="textBlock_text" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="474" Width="508" TextAlignment="Justify"/>
+        </ScrollViewer>
+        <ComboBox x:Name="comboBox_themes" HorizontalAlignment="Left" Margin="642,16,0,0" VerticalAlignment="Top" Width="162" DropDownClosed="comboBox_themes_DropDownClosed" />
+    </Grid>
+</Window>

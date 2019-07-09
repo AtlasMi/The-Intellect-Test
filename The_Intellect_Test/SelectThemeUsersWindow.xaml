@@ -1,0 +1,19 @@
+﻿<Window x:Class="The_Intellect_Test.SelectThemeUsersWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="ITest.ico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_Intellect_Test"
+        mc:Ignorable="d"
+        Title="The Intellect Test | Выбор теста: Пользовательский раздел" Height="298.811" Width="460.651" ResizeMode="CanMinimize">
+    <Grid>
+        <Label x:Name="label" Content="Выберите тест" HorizontalAlignment="Left" Margin="51,17,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listBox_themes" HorizontalAlignment="Left" Height="201" Margin="12,43,0,0" VerticalAlignment="Top" Width="165"/>
+        <Button x:Name="button_test" Content="Начать тест" HorizontalAlignment="Left" Margin="235,102,0,0" VerticalAlignment="Top" Width="159" Height="27" Click="button_test_Click" Cursor="Hand"/>
+        <Button x:Name="button_add" Content="Добавить тест" HorizontalAlignment="Left" Margin="325,203,0,0" VerticalAlignment="Top" Width="104" Height="24" Click="button_add_Click" Cursor="Hand"/>
+        <Button x:Name="button_edit" Content="Изменить тест" HorizontalAlignment="Left" Margin="203,183,0,0" VerticalAlignment="Top" Width="104" Height="24" Click="button_edit_Click" Cursor="Hand"/>
+        <Button x:Name="button_delete" Content="Удалить тест" HorizontalAlignment="Left" Margin="203,220,0,0" VerticalAlignment="Top" Width="104" Height="24" Click="button_delete_Click" Cursor="Hand"/>
+    </Grid>
+</Window>

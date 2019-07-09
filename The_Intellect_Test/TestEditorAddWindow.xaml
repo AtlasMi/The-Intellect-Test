@@ -1,0 +1,18 @@
+﻿<Window x:Class="The_Intellect_Test.TestEditorAddWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="ITest.ico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_Intellect_Test"
+        mc:Ignorable="d"
+        Title="The Intellect Test | Создание теста" Height="231.86" Width="290.776" ResizeMode="CanMinimize">
+    <Grid>
+        <TextBox x:Name="textBox_name" HorizontalAlignment="Left" Height="23" Margin="63,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" MaxLength="20"/>
+        <Label x:Name="label_name" Content="Название теста" HorizontalAlignment="Left" Margin="91,31,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_count" HorizontalAlignment="Left" Height="23" Margin="63,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" MaxLength="2"/>
+        <Label x:Name="label_count" Content="Количество вопросов" Margin="74,96,77,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_ok" Content="ОК" HorizontalAlignment="Left" Margin="100,162,0,0" VerticalAlignment="Top" Width="75" Click="button_ok_Click" />
+    </Grid>
+</Window>

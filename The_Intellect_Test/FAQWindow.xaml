@@ -1,0 +1,17 @@
+﻿<Window x:Class="The_Intellect_Test.FAQWindow"
+        WindowStartupLocation="CenterScreen"
+        Icon="ITest.ico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_Intellect_Test"
+        mc:Ignorable="d"
+        Title="The Intellect Test | Помощь" Height="343.487" Width="676.65" ResizeMode="CanMinimize">
+    <Grid>
+         <Border BorderBrush="DarkGray" BorderThickness="1" HorizontalAlignment="Left" Height="242" Margin="229,18,0,0" VerticalAlignment="Top" Width="423"/>
+        <ListBox x:Name="listBox_faq" HorizontalAlignment="Left" Height="242" Margin="10,18,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="listBox_faq_SelectionChanged"/>
+        <Button x:Name="button_back" Content="Назад" HorizontalAlignment="Left" Margin="10,273,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Cursor="Hand"/>
+        <TextBlock x:Name="textBlock_text" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="236" Width="411" TextAlignment="Justify" Margin="233,18,0,0"/>
+    </Grid>
+</Window>
